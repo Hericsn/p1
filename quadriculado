@@ -1,0 +1,36 @@
+import turtle
+
+# Configurações iniciais
+turtle.speed(0)
+turtle.bgcolor("white")
+turtle.pensize(2)
+
+# Função para desenhar um quadrado
+def draw_square(size):
+    for _ in range(4):
+        turtle.forward(size)
+        turtle.left(90)
+
+# Função para desenhar um elefante quadriculado
+def draw_checkered_elephant(size, rows, cols):
+    for _ in range(rows):
+        for _ in range(cols):
+            turtle.color("gray")
+            draw_square(size)
+            turtle.forward(size)
+        turtle.backward(size * cols)
+        turtle.right(90)
+        turtle.forward(size)
+        turtle.left(90)
+    turtle.hideturtle()
+
+# Posicionamento inicial
+turtle.penup()
+turtle.goto(-200, 200)
+turtle.pendown()
+
+# Desenhar o elefante quadriculado
+draw_checkered_elephant(20, 10, 10)
+
+# Manter a janela aberta
+turtle.done()
