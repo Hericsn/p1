@@ -1,0 +1,14 @@
+import datetime
+import time
+
+def display_clock():
+    while True:
+        current_time = datetime.datetime.now()
+        formatted_time = current_time.strftime("%H:%M:%S")
+        print("\r", formatted_time, end="", flush=True)
+        time.sleep(1)
+
+try:
+    display_clock()
+except KeyboardInterrupt:
+    print("\nRelógio encerrado.")
