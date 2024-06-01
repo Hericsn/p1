@@ -1,0 +1,14 @@
+import pandas as pd
+
+# Dados da tabela
+data = {
+    'Nome': ['João', 'Maria', 'Pedro'],
+    'Idade': [25, 30, 28],
+    'Cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']
+}
+
+# Criando o DataFrame
+df = pd.DataFrame(data)
+
+# Exibindo a tabela
+print(df)
